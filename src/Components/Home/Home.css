@@ -2,3 +2,62 @@
 .icons:hover{
     color:cornflowerblue;
 }
+.profile-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-area .outer-circle{
+    width: 26rem;
+    height: 26rem;
+    border: 1px solid palegreen;
+    border-radius: 50%;
+    position: relative;
+    /* background-color: blue; */
+    animation: move 30s linear infinite;
+}
+@keyframes move {
+    to {
+        transform: rotate(360deg);
+    } 
+}
+.profile-area .outer-circle span{
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    position: absolute;
+    background-color: tomato;
+    color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 1rem p;
+}
+.profile-area .outer-circle span:nth-child(1){
+    left: calc(50% - 2rem);
+    top: -2rem;
+}
+.profile-area .outer-circle span:nth-child(2){
+    right: -2rem;
+    top : calc(50% - 2rem);
+}
+.profile-area .outer-circle span:nth-child(3){
+    left: -2rem;
+    top: calc(50% - 2rem);
+}
+.profile-area .outer-circle span:nth-child(4){
+    bottom: -2rem;
+    left: calc(50% - 2rem);
+}
+.profile-area .inner-circle{
+    /* display: none; */
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.material-icons-sharp{
+    font-size: 1.5rem;
+}
